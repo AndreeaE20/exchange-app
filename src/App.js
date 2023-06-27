@@ -1,6 +1,5 @@
 import "./App.css";
 import Exchange from "./Components/Exchange/Exchange";
-
 function App() {
   return (
     <div className="App">
