@@ -1,7 +1,9 @@
 .exchange-container {
-    background-color: #fff;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     border-radius: 10px;
     padding: 30px 40px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 50px black;
 }
 
 .exchange-container div, .exchange-container {
@@ -11,8 +13,8 @@
 input, select {
     padding: 7px 10px;
     border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    border: 1px solid #000007;
+    background-color: rgba(253, 255, 254, 0.61);
 }
 
 input {
@@ -25,20 +27,23 @@ select, button {
 }
 
 select:hover {
-    background-color: #ddd;
+    background-color: #ff8a8a;
 }
 
 button {
     padding: 7px 10px;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border: none;
-    background-color: rgb(70, 230, 70);
+    background-color: rgb(80, 199, 185);
     color: #fff;
     font-weight: 700;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px 5px #030e25;
 }
 
 button:hover {
-    background-color: rgb(47, 182, 47);
+    background-color: rgb(0, 253, 191);
+    text-shadow: 1px 1px darkred ;
 }
 
