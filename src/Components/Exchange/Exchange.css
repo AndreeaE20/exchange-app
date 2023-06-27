@@ -1,0 +1,44 @@
+.exchange-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.exchange-container div, .exchange-container {
+    margin: 20px 0;
+}
+
+input, select {
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+input {
+    margin-right: 10px;
+}
+
+select, button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+select:hover {
+    background-color: #ddd;
+}
+
+button {
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    border: none;
+    background-color: rgb(70, 230, 70);
+    color: #fff;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: rgb(47, 182, 47);
+}
+
