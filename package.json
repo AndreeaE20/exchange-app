@@ -1,7 +1,7 @@
 {
   "name": "exchange",
   "version": "0.1.0",
-  "homepage": "https://AndreeaE20.github.io/exchange-app",
+  "homepage": "https://gitAndreeaE20.github.io/exchange-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
