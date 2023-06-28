@@ -36,8 +36,16 @@ const Exchange = () => {
     }, [])
 
     const switchValue = () => {
-        axios.get(`https://api.exchangerate.host/convert?from=${to.currency}&to=${from.currency}&amount=${from.amount}`).then(res => setTo({amount:res.data.result, currency: to.currency}))
-        console.log('Andreea');
+        axios.get(`https://api.exchangerate.host/convert?from=${to.currency}&to=${from.currency}&amount=${from.amount}`).then(res => setTo({amount:res.data.result, currency: to.currency}));
+        
+        let second = document.getElementById("second");
+        let first = document.getElementById("first");
+        let temp;
+
+        temp = second.value;
+        second.value = first.value;
+        first.value = temp;
+
     }
     
 
@@ -47,7 +55,7 @@ const Exchange = () => {
                 <label> Convert money from: </label>
                 <br></br>
                 <input type='number' placeholder='Amount...' value={from.amount} onChange={(e) => setFromAmount(e.target.value)} />
-                <select onChange={(e) => setFromCurrency(e.target.value)}>
+                <select id='first' onChange={(e) => setFromCurrency(e.target.value)}>
                 {coins.map((coin, key) => (
                         <option key={key} value={coin}>{coin}</option>
                     ))}
@@ -57,7 +65,7 @@ const Exchange = () => {
                 <label>&nbsp; To:       </label>
                 <br></br>
                 <input type='text' disabled value={to.amount} />
-                <select onChange={(e) => setToCurrency(e.target.value)}>
+                <select id='second' onChange={(e) => setToCurrency(e.target.value)}>
                     {coins.map((coin, key) => (
                         <option key={key} value={coin}>{coin}</option>
                     ))}
