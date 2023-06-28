@@ -35,11 +35,17 @@ const Exchange = () => {
         })
     }, [])
 
+    const switchValue = () => {
+        axios.get(`https://api.exchangerate.host/convert?from=${to.currency}&to=${from.currency}&amount=${from.amount}`).then(res => setTo({amount:res.data.result, currency: to.currency}))
+        console.log('Andreea');
+    }
+    
 
     return (
         <div className='exchange-container'>
             <div className='input-container'>
-                <label> Input the money here ->  </label>
+                <label> Convert money from: </label>
+                <br></br>
                 <input type='number' placeholder='Amount...' value={from.amount} onChange={(e) => setFromAmount(e.target.value)} />
                 <select onChange={(e) => setFromCurrency(e.target.value)}>
                 {coins.map((coin, key) => (
@@ -48,7 +54,8 @@ const Exchange = () => {
                 </select>
             </div>
             <div className='input-container'>
-                <label>&nbsp; Cashout money here  &lt;-  </label>
+                <label>&nbsp; To:       </label>
+                <br></br>
                 <input type='text' disabled value={to.amount} />
                 <select onChange={(e) => setToCurrency(e.target.value)}>
                     {coins.map((coin, key) => (
@@ -57,6 +64,7 @@ const Exchange = () => {
                 </select>
             </div>
             <button onClick={() => exchange()}>Exchange</button>
+            <button onClick={() => switchValue()}>Switch value</button>
         </div>
     )
 }

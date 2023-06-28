@@ -40,6 +40,7 @@ button {
     font-weight: 700;
     text-shadow: 1px 1px black;
     box-shadow: 1px 1px 5px #030e25;
+    margin-right: 10px;
 }
 
 button:hover {
